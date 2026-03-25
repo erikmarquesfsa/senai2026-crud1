@@ -37,7 +37,7 @@ form input
 	border-radius: 5px;
 	padding-right: 110px;
 }
-form input[type="button"]
+form input[type="submit"]
 {
 	background: #16b;
 	color: #fff;

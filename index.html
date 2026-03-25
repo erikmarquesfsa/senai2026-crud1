@@ -7,20 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-    <form>
+    <form action="auth/login.php" method="post">
       <h1>Login</h1>
       <div class="row">
-        <input type="email" placeholder="Email" />
-        <span>@gmail.com</span>
+        <input type="email" name="email" placeholder="Email" />
       </div>
       <div class="row">
-        <input type="password" class="senha" placeholder="Senha" />
+        <input type="password" name="senha" class="senha" placeholder="Senha" />
         <img
           src="https://icon-library.com/images/icon-eyes/icon-eyes-12.jpg"
           class="btn"
         />
       </div>
-      <input type="button" value="Enviar" />
+      <input type="submit" value="Enviar" />
     </form>
 
    
