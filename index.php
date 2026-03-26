@@ -1,3 +1,6 @@
+<?php
+include "auth/logout.php";
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
