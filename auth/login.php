@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     //PEGANDO OS DADOS DO FORM
     $usuario = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     //evita injection
     $usuario = mysqli_real_escape_string($conn,$usuario);
