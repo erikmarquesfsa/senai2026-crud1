@@ -55,6 +55,18 @@ include "scripts/functions.php";
           <input type="text" class="form-control" placeholder="http://...">
         </div>
       </div>
+
+      <div class="row g-3">
+        <div class="col">
+          <label class="form-label">Valor do Produto:</label>
+          <input type="number" step="0.01" class="form-control" placeholder="Valor">
+        </div>
+        <div class="col">
+          <label class="form-label">Desconto</label>
+          <input type="number" step="0.01" class="form-control" placeholder="Desconto">
+        </div>
+      </div>
+      
     </form>
   </div>
 
