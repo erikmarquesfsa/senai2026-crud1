@@ -33,7 +33,7 @@ include "scripts/functions.php";
           <a class="nav-link" href="#">Pricing</a>
         </li>
       </ul>
-      <b>Seja bem vindo <?php echo dadosCadastro($_SESSION['usuario']); ?></b>
+      <b class="ms-auto">Seja bem vindo <?php echo dadosCadastro($_SESSION['usuario']); ?></b>
     </div>
   </div>
 </nav>
