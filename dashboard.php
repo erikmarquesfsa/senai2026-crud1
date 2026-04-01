@@ -44,27 +44,31 @@ include "scripts/functions.php";
 
   <div class="container">
     <h1 class="titulo">Cadastre seu Produto</h1>
-    <form>
+    <form method="post" action="scripts/salvar_produto.php">
       <div class="row g-3">
         <div class="col">
           <label class="form-label">Nome do Produto:</label>
-          <input type="text" class="form-control" placeholder="Informe o nome do produto">
+          <input type="text" name="nome_produto" class="form-control" placeholder="Informe o nome do produto">
         </div>
         <div class="col">
           <label class="form-label">Imagem do Produto</label>
-          <input type="text" class="form-control" placeholder="http://...">
+          <input type="text" name="imagem_produto" class="form-control" placeholder="http://...">
         </div>
       </div>
 
       <div class="row g-3">
         <div class="col">
           <label class="form-label">Valor do Produto:</label>
-          <input type="number" step="0.01" class="form-control" placeholder="Valor">
+          <input type="number" name="valor_produto" step="0.01" class="form-control" placeholder="Valor">
         </div>
         <div class="col">
           <label class="form-label">Desconto</label>
-          <input type="number" step="0.01" class="form-control" placeholder="Desconto">
+          <input type="number" name="desconto_produto" step="0.01" class="form-control" placeholder="Desconto">
         </div>
+      </div>
+
+      <div class="col-md-12">
+        <input type="submit" class="btn btn-success" value="Salvar">
       </div>
       
     </form>
