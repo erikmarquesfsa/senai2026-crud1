@@ -10,7 +10,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $resultado = mysqli_query($conn,$sql);
 
     if($resultado){
-        echo "ok";
+        echo "
+        <script>
+        Swal.fire({
+            title: 'Sucesso',
+            text: 'That thing is still around?',
+            icon: 'success'
+            });
+        </script>
+        ";
     }else{
         echo "n ok";
     }
