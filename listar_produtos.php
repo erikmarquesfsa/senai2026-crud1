@@ -62,8 +62,10 @@ include "scripts/functions.php";
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['nome_produto']; ?></td>
-                    <td><?php echo $row['url_imagem']; ?></td>
-                    <td><?php echo $row['valor']; ?></td>
+                    <td><img src="<?php echo $row['url_imagem']; ?>" width="150px" height="150px"></td>
+                    <td>
+                        <?php echo "R$ ". number_format($row['valor'],2,',','.'); ?>
+                    </td>
                     <td><?php echo $row['desconto']; ?></td>
                 </tr>
                 <?php } ?>               
