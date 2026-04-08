@@ -51,7 +51,7 @@ include "scripts/functions.php";
                         <a href="editar.php" class="btn btn-warning">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
-                        <a href="scripts/deletar_produto.php" class="btn btn-danger">
+                        <a href="scripts/deletar_produto.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>

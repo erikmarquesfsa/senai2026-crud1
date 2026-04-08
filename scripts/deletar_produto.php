@@ -8,11 +8,11 @@
 <body>    
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+if($_SERVER["REQUEST_METHOD"]=="GET"){
     include "../config/conexao.php";
     
-    $id = $_POST['id'];
-    $sql = "DELETE produtos WHERE id = '$id'";
+    $id = $_GET['id'];
+    $sql = "DELETE FROM produtos WHERE id = '$id'";
     $resultado = mysqli_query($conn,$sql);
 
     if($resultado){
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <script>
         Swal.fire({
             title: 'Sucesso',
-            text: 'Registro realizado com sucesso!',
+            text: 'Registro deletado com sucesso!',
             icon: 'success',
             confirmButtonText:'OK'
             }).then(() =>{
