@@ -60,11 +60,11 @@ include "scripts/functions.php";
                 while($row = $result->fetch_assoc()){
                 ?>
                 <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['nome_produto']; ?></td>
+                    <td><?php echo $row['url_imagem']; ?></td>
+                    <td><?php echo $row['valor']; ?></td>
+                    <td><?php echo $row['desconto']; ?></td>
                 </tr>
                 <?php } ?>               
             </tbody>
