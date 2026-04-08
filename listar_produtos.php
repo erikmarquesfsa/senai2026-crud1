@@ -13,6 +13,7 @@ include "scripts/functions.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/principal.css" rel="stylesheet">
     <title>Listar Produtos</title>
 </head>
@@ -29,6 +30,7 @@ include "scripts/functions.php";
                     <th scope="col">Imagem</th>
                     <th scope="col">Valor</th>
                     <th scope="col">Desconto</th>
+                    <th scope="col">&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +47,14 @@ include "scripts/functions.php";
                         <?php echo "R$ ". number_format($row['valor'],2,',','.'); ?>
                     </td>
                     <td><?php echo $row['desconto']; ?></td>
+                    <td>
+                        <a href="editar.php" class="btn btn-warning">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        <a href="deletar.php" class="btn btn-danger">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </td>
                 </tr>
                 <?php } ?>               
             </tbody>
