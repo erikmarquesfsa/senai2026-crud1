@@ -48,7 +48,7 @@ include "scripts/functions.php";
                     </td>
                     <td><?php echo $row['desconto']; ?></td>
                     <td>
-                        <a href="editar.php" class="btn btn-warning">
+                        <a href="editar_produtos.php" class="btn btn-warning">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
                         <a href="scripts/deletar_produto.php?id=<?php echo $row['id']; ?>" class="btn btn-danger"  onclick="return confirm('Tem certeza que deseja sair desta página?');">

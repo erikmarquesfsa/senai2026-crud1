@@ -39,23 +39,31 @@ include "scripts/functions.php";
                 $result = $conn->query("SELECT * FROM produtos");
                 while($row = $result->fetch_assoc()){
                 ?>
+                <form method="post" action="scripts/alterar_produto.php">
                 <tr>
-                    <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['nome_produto']; ?></td>
-                    <td><img src="<?php echo $row['url_imagem']; ?>" width="150px" height="150px"></td>
                     <td>
-                        <?php echo "R$ ". number_format($row['valor'],2,',','.'); ?>
+                        <input type="text" name="id" class="form-control" value="<?php echo $row['id']; ?>">
                     </td>
-                    <td><?php echo $row['desconto']; ?></td>
                     <td>
-                        <a href="editar.php" class="btn btn-warning">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                        <a href="scripts/deletar_produto.php?id=<?php echo $row['id']; ?>" class="btn btn-danger"  onclick="return confirm('Tem certeza que deseja sair desta página?');">
-                            <i class="fa-solid fa-trash"></i>
-                        </a>
+                        <input type="text" name="produto" class="form-control" value="<?php echo $row['nome_produto']; ?>">
+                    </td>
+                    <td>
+                        <textarea cols="40" rows="5" name="imagem" class="form-control">
+                            <?php echo $row['url_imagem']; ?>
+                        </textarea>
+                        <img src="<?php echo $row['url_imagem']; ?>" width="50px" height="50px">
+                    </td>
+                    <td>
+                        <input type="text" name="valor" class="form-control" value="<?php echo $row['valor']; ?>">
+                    </td>
+                    <td>
+                         <input type="text" name="desconto" class="form-control" value="<?php echo $row['desconto']; ?>">
+                        </td>
+                    <td>
+                        <input type="submit" value="Alterar" class="btn btn-warning">                
                     </td>
                 </tr>
+                </form>
                 <?php } ?>               
             </tbody>
         </table>
